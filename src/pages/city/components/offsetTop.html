@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+    }
+    h1{
+      /* margin-top: 10px; */
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>你好</h1>
+  </div>
+</body>
+<script>
+  var h = document.querySelector('h1');
+  console.log(h.offsetLeft);
+</script>
+</html>

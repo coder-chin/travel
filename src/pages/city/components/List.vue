@@ -12,13 +12,18 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper" v-for="item of hot" :key="item.id">
+          <div class="button-wrapper" 
+              v-for="item of hot" 
+              :key="item.id">
             <div class="button">{{ item.name }}</div>
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item, key) of cities" :key="key"
+      <div class="area"
+          v-for="(item, key) of cities"
+          :key="key"
       :ref="key">
+      <!-- 遍历对象  第一个参数是对象本身。第二个参数是对象名 -->
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
           <div
@@ -49,7 +54,7 @@ export default {
   watch: {
     letter() {
       if (this.letter) {
-        const element = this.$refs[this.letter][0]
+        const element = this.$refs[this.letter][0]   //为什么获取到的是数组
         this.scroll.scrollToElement(element);
       }
     },

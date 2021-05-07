@@ -2,8 +2,14 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hot="hotCities" :letter = 'letter'></city-list>
-    <city-alphabet :cities="cities" @change = 'handleLetterChange'></city-alphabet>
+    <city-list 
+    :cities="cities" 
+    :hot="hotCities" 
+    :letter = 'letter'></city-list>
+    <city-alphabet 
+    :cities="cities" 
+    @change = 'handleLetterChange'>
+    </city-alphabet>
   </div>
 </template>
 <script>
@@ -34,7 +40,7 @@ export default {
     },
     
     handleGetCityInfoSucc (res) {
-      res = res.data
+      res = res.data  //这行代码不是多余的
       if(res.ret && res.data){
         const data = res.data
         this.cities = data.cities
