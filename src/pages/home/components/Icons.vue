@@ -5,7 +5,7 @@
         <div class="icon" 
         v-for="item of page" :key="item.id">
           <img
-            :src="item.imgUrl"
+          :src="item.imgUrl"
           />
           <p>{{item.desc}}</p>
         </div>
@@ -34,8 +34,8 @@ export default {
       this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if(!pages[page])
-        pages[page] = []
-        pages[page].push(item)
+          pages[page] = []
+        pages[page].push(item)   //二维数组，自动分页
       })
       return pages
     }

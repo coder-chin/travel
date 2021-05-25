@@ -25,7 +25,7 @@ export default new Router({
     }
   ],
   scrollBehavior (to, from, savedPosition) {
-  return { x: 0, y: 0 }
-  },
+    return { x: 0, y: 0 }
+  }, //回到原来的页面时都回到顶部
   mode: "hash"
 });

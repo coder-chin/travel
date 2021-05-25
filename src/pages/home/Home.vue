@@ -41,7 +41,7 @@ export default {
   activated() {
     if(this.lastCity !== this.city){
       this.lastCity = this.city
-      this.getHomeInfo()
+      this.getHomeInfo()  //lastCity没有被引用，他的作用就是监控当到当前页面时，重新发送网络请求
     }
   },
   computed: {
