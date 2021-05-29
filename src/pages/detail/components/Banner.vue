@@ -19,12 +19,8 @@
       @close="handleGallaryClose">
       </common-gallary>
     </fade-animation>
-    
   </div>
 </template>
-  
-  
-
 <script>
 import CommonGallary from 'common/gallary/Gallary'
 import FadeAnimation from 'common/fade/FadeAnimation'
@@ -41,8 +37,7 @@ export default {
   },
   data() {
     return {
-      imgs: ['http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg',
-      'http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg'],
+      imgs: [],
       showGallary: false
     }
   },

@@ -57,8 +57,6 @@ export default {
           this.$emit('change',this.letters[index]);
           }
         },16)
-        
-        
       }
     },
     handleTouchEnd(){

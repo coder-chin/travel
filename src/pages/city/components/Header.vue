@@ -1,10 +1,9 @@
 <template>
   <div class='header'>
-    城市选择
     <router-link to="/">
       <i class='iconfont back'>&#xe624;</i>
     </router-link>
-    
+    城市选择
   </div>
 </template>
 <script>

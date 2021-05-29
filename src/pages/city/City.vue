@@ -27,6 +27,9 @@ export default {
     CityList,
     CityAlphabet
   },
+  mounted() {
+    this.getCityInfo()
+  },
   data() {
       return{
         cities:{},
@@ -51,9 +54,6 @@ export default {
     handleLetterChange(letter) {
       this.letter = letter
     }
-  },
-  mounted() {
-    this.getCityInfo()
   }
 }
 </script>

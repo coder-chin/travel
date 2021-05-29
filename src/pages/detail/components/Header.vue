@@ -12,8 +12,8 @@
     v-show="!showAbs"
     :style="opacityStyle">
       <router-link to="/">
-      <i class='iconfont header-fixed-back'>&#xe624;</i>
-    </router-link>
+        <i class='iconfont header-fixed-back'>&#xe624;</i>
+      </router-link>
       景点详情
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
     handleScroll() {
       const top = document.documentElement.scrollTop
       if(top > 60){
-        let opacity = top/140
+        let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = {
           opacity
@@ -44,11 +44,17 @@ export default {
       else this.showAbs = true
     }
   },
-  activated() {
-    window.addEventListener('scroll',this.handleScroll)
+  // activated() {
+  //   window.addEventListener('scroll',this.handleScroll)
+  // },
+  // deactivated() {
+  //   window.removeEventListener('scroll',this.handleScroll)
+  // }
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated() {
-    window.removeEventListener('scroll',this.handleScroll)
+  unmounted () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -70,7 +76,7 @@ export default {
     }
   }
   .header-fixed{
-    z-index: 2;
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;

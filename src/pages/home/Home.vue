@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     getHomeInfo() {
-      axios.get('./api/index.json?city=' + this.city)
+      axios.get('./api/index.json')
       .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res) {

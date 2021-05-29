@@ -14,7 +14,9 @@
       class="search-item border-bottom"
       @click='handleCityClick(item.name)'
       >{{item.name}}</li>
-      <li class="search-item border-bottom" v-show="hasNoData">
+      <li 
+      class="search-item border-bottom" 
+      v-show="hasNoData">
         没有找到匹配数据
       </li>
     </ul>
@@ -42,6 +44,9 @@ export default {
       return !this.list.length
     }
   },
+  mounted() {
+      this.scroll = new Bscroll(this.$refs.search)
+  },
   watch: {
     keyword() {
       if(this.timer){
@@ -64,9 +69,6 @@ export default {
         this.list = result
       },100)
     }
-  },
-  mounted() {
-      this.scroll = new Bscroll(this.$refs.search)
   },
   methods: {
     handleCityClick(city){

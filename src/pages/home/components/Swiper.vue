@@ -5,9 +5,8 @@
       <swiper-slide v-for="item of list" :key="item.id">
         <img :src="item.imgUrl" alt="">
       </swiper-slide>
-    
-    <div class="swiper-pagination"  slot="pagination"></div>
-  </swiper>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
   </div>
 </template>
 
@@ -29,10 +28,10 @@ export default {
 </script>
 
 <style lang='less' scoped>
-  .wrapper /deep/ .swiper-pagination-bullet-active 
+  .swiper /deep/ .swiper-pagination-bullet-active 
   //.wrapper >>> .swiper-pagination-bullet-active
   {
-    background-color: #fff;
+    background-color: #fff !important;
   }
   .swiper{
     width: 100%;

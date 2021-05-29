@@ -28,12 +28,12 @@ export default {
 
 <style lang='less' scoped>
   .header{
-    height: .86rem;
     display: flex;
-    background-color: #00bcd4;
-    color: #fff;
+    //块级元素默认宽度100%
     height: .86rem;
     line-height: .86rem;
+    background-color: #00bcd4;
+    color: #fff;
     .header-left{
       width: .64rem;
       float: left;
@@ -54,6 +54,7 @@ export default {
       padding-left: .07rem;
     }
     .header-right{
+      //很好的写法，防止宽度写死，当内容多时会打乱样式
       min-width: 1.04rem;
       padding: 0 .1rem;
       float: right;
